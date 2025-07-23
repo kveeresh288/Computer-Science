@@ -1,3 +1,4 @@
+package Java.Functions.Basics;
 import java.util.Scanner;
 class FunctionCall {
    public static void main(String[] var0) {
