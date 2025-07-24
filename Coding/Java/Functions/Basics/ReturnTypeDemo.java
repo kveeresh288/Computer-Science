@@ -1,4 +1,4 @@
-package Java.Functions.Basics;
+package Functions.Basics;
 
 import java.util.Scanner;
 class ReturnTypeDemo {
