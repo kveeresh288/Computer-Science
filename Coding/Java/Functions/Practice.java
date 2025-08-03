@@ -213,6 +213,69 @@ public class Practice {
         System.out.print("Merged Array: ");
         System.out.println(Arrays.toString(mergedArray));
     }
+
+    public static int findSecoundLarge(int arr[]){
+        if(arr.length<2)return -1;
+        int max = Integer.MIN_VALUE;
+        int smax = Integer.MIN_VALUE;
+        for(int num:arr){
+            if(num>max){
+                smax=max;
+                max=num;
+            }
+            else if(num>smax && num<max){
+                smax=num;
+            }
+        }
+        return smax;
+    }
+
+    public static void invoke_findSecoundLarge() {
+        int[] arr = {10, 5, 8, 20, 20, 15};
+
+        int result = findSecoundLarge(arr);
+        System.out.println("Second Largest Element: " + result);
+    }
+    public static void printUnique(int[] arr){
+        for(int i = 0;i<arr.length;i++){
+            boolean isDuplicate = false ;
+            for(int j = 0 ; j < arr.length;j++){
+                if(arr[i]==arr[j] && i != j){
+                    isDuplicate=true;
+                    break;
+                }
+            }
+        if(!isDuplicate)System.out.print(arr[i]+" ");
+        }
+    }
+    public static void invoke_printUnique() {
+        int[] arr = {4, 5, 3, 4, 2, 5, 7};
+        System.out.print("Unique elements: ");
+        printUnique(arr);
+        System.out.println(); 
+    }
+
+    public static void printCommonElements(int[] arr1 , int arr2[]){
+        for(int i = 0; i< arr1.length;i++){
+            boolean isFound = false ;
+            for(int j=0;j<arr2.length;j++){
+                if(arr1[i]==arr2[j]){
+                    isFound=true;
+                    break;
+                }
+            }
+            if(isFound)System.out.println(arr1[i] +" ");
+        }
+
+    }
+
+    public static void invoke_printCommonElements() {
+        int[] arr1 = {1, 2, 3, 4, 5};
+        int[] arr2 = {3, 4, 6, 7, 2};
+
+        System.out.println("Common elements between arr1 and arr2:");
+        printCommonElements(arr1, arr2);
+    }
     public static void main(String[] args) {
         invoke_getSum();
         invoke_swap();
@@ -228,6 +291,9 @@ public class Practice {
         invoke_printMinMax();
         invoke_binarySearch();
         invoke_mergeArrays();
+        invoke_findSecoundLarge();
+        invoke_printUnique();
+        invoke_printCommonElements();
     }
 }
 
