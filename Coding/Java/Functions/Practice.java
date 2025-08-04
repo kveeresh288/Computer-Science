@@ -276,6 +276,99 @@ public class Practice {
         System.out.println("Common elements between arr1 and arr2:");
         printCommonElements(arr1, arr2);
     }
+
+    public static int getCountOfWords(String s){
+
+        if(s.length()==0)return 0;
+
+        int count = 0;
+
+        char prev = s.charAt(0) ;
+        for(int i = 0 ; i<s.length() ; i++){
+
+            char ch = s.charAt(i);
+
+            if(ch == ' ' || ch == '\t' || ch == '\n'){
+
+                if(prev != ' ' && prev != '\t' && prev != '\n' ){
+                    count++;
+                }
+
+            }
+            prev = ch ;
+               
+        }
+
+        if (prev == ' ' || prev == '\t' || prev == '\n')  return count;
+       
+        return count + 1;
+    }
+
+    public static void printBinary(int number){
+
+        int mask = 1; // 1 is aleardy present at 1st bit or house 
+        mask = mask << ((Integer.BYTES * 8) - 2); // leave 1 bit for sign and 1 bit for already standing in first house 
+        
+        System.out.println("Binary Represntation of "+ number );
+
+        while(mask>0){
+
+            if ((number & mask) == 0) {
+                System.out.print("0 ");
+            } else {
+                System.out.print("1 ");
+            }
+            mask = mask >> 1 ;
+        }
+        System.out.println();
+        System.out.println();
+    }
+
+    public static void invoke_printBinary() {
+        int a = 10;
+        int b = -10;
+        int c = 0;
+        int d = 255;
+
+        printBinary(a);
+        printBinary(b);
+        printBinary(c);
+        printBinary(d);
+    }
+
+    public static void removespaces(String s){
+
+        StringBuilder sb = new StringBuilder();
+
+        for(int i =0 ; i<s.length();i++){
+
+            char ch = s.charAt(i);
+
+            if(ch == ' ')continue;
+
+            sb.append(ch);
+        }
+
+        System.out.println ("After Removing spaces ");
+
+        System.out.println(sb.toString());
+    }
+
+    public static void invoke_removespaces() {
+        String input1 = "My Name Is K Veeresh";
+        String input2 = "  Remove all  spaces!  ";
+
+        removespaces(input1);  
+        removespaces(input2);  
+    }
+
+    public static void invoke_getCountOfWords() {
+        String str = "  Namaskara My LinkedIn Family  ";
+        int wordCount = getCountOfWords(str);
+        System.out.println("Input string: \"" + str + "\"");
+        System.out.println("Word count: " + wordCount);
+    }
+
     public static void main(String[] args) {
         invoke_getSum();
         invoke_swap();
@@ -294,6 +387,9 @@ public class Practice {
         invoke_findSecoundLarge();
         invoke_printUnique();
         invoke_printCommonElements();
+        invoke_getCountOfWords();
+        invoke_printBinary();
+        invoke_removespaces();
     }
 }
 
