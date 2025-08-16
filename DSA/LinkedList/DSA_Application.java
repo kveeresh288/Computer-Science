@@ -6,6 +6,6 @@ public class DSA_Application {
         SinglyLinkedList sll = new SinglyLinkedList();
 
         sll.testAllOperations();
-
+        
     }
 }
