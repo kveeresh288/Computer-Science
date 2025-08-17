@@ -1,29 +1,28 @@
 package DSA.LinkedList;
 //import DSA.LinkedList.Node.java;
 
+
 public class SinglyLinkedList {
 
     Node head;
-
+    int size = 0;
     SinglyLinkedList() {
         this.head=null;
         System.out.println("New Singly Linked list Object is Created");
     }
 
     public void insertAtBegining(int data){
+
         //newnode creation
-        
         Node newNode = new Node(data);
         //works even if head is null
-        newNode.next = this.head ;
+        newNode.next = this.head;
         this.head = newNode; //update Head 
-
-        size++;
+        //update size
+        this.size++;
         
     }
     
-    int size = 0;
-
     public void printAllNodesData(){
 
         if(head == null){
@@ -49,7 +48,7 @@ public class SinglyLinkedList {
 
 
         if(head == null ){
-            size++;
+            this.size++;
             head = new Node(data);
             System.out.println("List Was Empty, made new node as Head ");
             return;
@@ -63,7 +62,7 @@ public class SinglyLinkedList {
         
         temp.next = new Node(data);
         System.out.println("Inserted Node at end ("+data+")");
-        size++;
+        this.size++;
 
         
 
@@ -81,7 +80,7 @@ public class SinglyLinkedList {
             return;
         }
 
-        if (position == size + 1) {
+        if (position == this.size + 1) {
             insertAtEnd(data);
             return;
         }
@@ -104,7 +103,72 @@ public class SinglyLinkedList {
         newNode.next = cur.next;
         cur.next = newNode;
 
-        size++;
+        this.size++;
+
+    }
+
+    public void deleteAtFront(){
+
+        if(this.head==null){
+            System.out.println("List Is Empty ");
+            return;
+        }
+
+        if(this.head.next==null){
+            this.head=null;
+            this.size--; //decrement size 
+            return;
+        }
+
+       this.head = this.head.next;
+       this.size--; //decrement size 
+
+    }
+
+    public void deleteAtEnd(){
+
+        if(this.head==null){
+            System.out.println("List Is Empty ");
+            return;
+        }
+
+        if(this.head.next==null){
+            this.head=null;
+            this.size--; //decrement size 
+            return;
+        }
+
+       Node prev = head;
+
+       while(prev.next.next != null){
+        prev = prev.next;
+       }
+
+       prev.next = null;
+
+       this.size--; //decrement size 
+    }
+
+    public boolean search(int key){
+
+        // if( this.head == null) {
+        //     System.out.println("List is Empty Key Cant be Found");
+        //     return false ;
+        // }
+
+        Node cur = head ;
+        
+        while (cur!=null) { 
+
+            if(cur.data == key){
+                System.out.println("Key Found");
+                return true;
+            }
+            cur = cur.next;   
+        }
+
+        System.out.println("Key is Not Found");
+        return false;
 
     }
 
@@ -142,6 +206,24 @@ public class SinglyLinkedList {
         this.printAllNodesData();
         System.out.println("Size "+size);
 
+           
+        System.out.println("Deleting at front...");
+        this.deleteAtFront();
+        this.printAllNodesData();
+        System.out.println("Size: " + size);
+
+       
+        System.out.println("Deleting at end...");
+        this.deleteAtEnd();
+        this.printAllNodesData();
+        System.out.println("Size: " + size);
+
+        
+        System.out.println("Searching for 20...");
+        this.search(20);  // should be found if still present
+
+        System.out.println("Searching for 99...");
+        this.search(99);  // not in list
 
     }
     
