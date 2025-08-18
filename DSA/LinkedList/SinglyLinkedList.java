@@ -172,6 +172,51 @@ public class SinglyLinkedList {
 
     }
 
+    public void deleteAtPosition(int deleteposition){
+
+        if (this.head == null) {
+            System.out.println("Can't Perform Deletion List is Empty ");
+            return ;
+        }
+
+        if( deleteposition<= 0 || deleteposition > this.size ){
+            System.out.println("Can't Perform Deletion Invalid Delete Position ");
+            return ;
+        }
+
+        //covers Single Node and MultiNode 
+        if(deleteposition == 1){
+            this.head = this.head.next;
+            this.size--;
+            return;
+        }
+
+        int position = 1 ;
+
+        Node cur = this.head;
+
+        while (position < deleteposition-1) { 
+
+            cur = cur.next;
+
+            if(cur == null){
+                break;
+            }
+
+            position++;
+            
+        }
+
+        if(cur == null){
+            System.out.println("Inavlid Delete Position ");
+            return;
+        }
+
+        cur.next = cur.next.next;
+        this.size--;
+
+    }
+
     public void testAllOperations(){
 
         this.insertAtBegining(3);
@@ -222,6 +267,29 @@ public class SinglyLinkedList {
         System.out.println("Searching for 20...");
         this.search(20);  // should be found if still present
 
+        System.out.println("Searching for 99...");
+        this.search(99);  // not in list
+
+        System.out.println("\nDeleting at specific positions...");
+        this.deleteAtPosition(1);  // delete head
+        this.printAllNodesData();
+        System.out.println("Size: " + size);
+    
+        this.deleteAtPosition(3);  // delete middle
+        this.printAllNodesData();
+        System.out.println("Size: " + size);
+    
+        this.deleteAtPosition(size);  // delete last
+        this.printAllNodesData();
+        System.out.println("Size: " + size);
+    
+        this.deleteAtPosition(100); // invalid
+        this.printAllNodesData();
+        System.out.println("Size: " + size);
+    
+        System.out.println("\nSearching for 20...");
+        this.search(20);  // should be found if still present
+    
         System.out.println("Searching for 99...");
         this.search(99);  // not in list
 
