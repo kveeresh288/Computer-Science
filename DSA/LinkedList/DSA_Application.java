@@ -5,11 +5,11 @@ public class DSA_Application {
        
         SinglyLinkedList sll = new SinglyLinkedList();
         DoublyLinkedList dll = new DoublyLinkedList();
-
-       // sll.testAllOperations();
         dll.testAllOperations();
+
+
+        // sll.testAllOperations();
         // dll.printAllNodes();
        // dll.testDeleteOperations();
-
     }
 }

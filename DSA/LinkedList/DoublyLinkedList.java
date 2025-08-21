@@ -4,6 +4,7 @@ package DSA.LinkedList;
 public class DoublyLinkedList {
 
     Dnode head;
+   // Dnode tail;
     int size;
 
     public DoublyLinkedList()
@@ -79,8 +80,6 @@ public class DoublyLinkedList {
             this.InsertAtEnd(data);
             return;
         }
-
-       
 
         Dnode leftNode = this.head;
 
@@ -171,7 +170,6 @@ public class DoublyLinkedList {
 
 
         System.out.println("null \n");
-
     }
 
     public void search(int key)
@@ -200,46 +198,162 @@ public class DoublyLinkedList {
        System.out.println(key + " Key is NOT found!");
     }
 
+    // Delete Operations
+
+    // Delete at front 
+    public void deleteAtFront(){
+        if( this.head == null ) { 
+            System.out.println("The List IS Empty Can't Delete: ");
+            return;
+        }
+
+        if(this.head.next == null){
+
+            this.head =null;
+            this.size--; //Decrement Size ;
+            return;
+        }
+
+        this.head = head.next;
+        this.head.prev = null;
+        this.size--;
+
+    }
+
+    // Delete at End
+    public void deleteAtEnd(){
+
+        if( this.head == null ) { 
+            System.out.println("The List IS Empty Can't Delete: ");
+            return;
+        }
+
+        if(this.head.next == null){
+            this.head =null;
+            this.size--; //Decrement Size ;
+            return;
+        }
+
+        Dnode lastNode = head ;
+
+        while ( lastNode .next != null) { 
+            lastNode  = lastNode .next;       
+        }
+
+        lastNode .prev.next = null;
+        lastNode .next = null ; //optional Clean UP
+        this.size--;
+    }
+
+    // DeleteAtPosition 
+    public void deleteAtPosition(int position){
+        if( this.head == null ) { 
+            System.out.println("The List IS Empty Can't Delete: ");
+            return;
+        }
+
+        if (position == 1) {
+            deleteAtFront();
+            return;
+        }
+
+        if(position == this.size){
+            deleteAtEnd();
+            return;
+        }
+
+        if(position <= 0 || position > this.size){
+            System.out.println("Invalid Position ");
+            return;
+        }
+
+        int prevPosition = 1;
+        Dnode temp = head;
+
+        while (prevPosition < position - 1) { 
+            temp = temp.next;
+            prevPosition++;
+        }
+
+        temp.next = temp.next.next;
+        temp.next.prev = temp;
+        this.size--;
+    }
 
     public void testAllOperations() {
 
-        System.out.println("=== Testing DoublyLinkedList Operations ===");
-    
-        // Case 1: Empty list search
-        this.search(5);
-    
-        // Case 2: Insert at invalid position
-        this.insertAtPosition(100, -1);
-    
-        // Case 3: Insert at beginning
-        this.InsertAtBeginning(1);
+    System.out.println("=== Testing DoublyLinkedList Operations ===");
+
+    // Case 1: Empty list search
+    this.search(5);
+
+    // Case 2: Insert at invalid position
+    this.insertAtPosition(100, -1);
+
+    // Case 3: Insert at beginning
+    this.InsertAtBeginning(1);
+    this.printAllNodes();
+
+    // Case 4: Insert at end
+    this.InsertAtEnd(10);
+    this.printAllNodes();
+
+    // Case 5: Insert at valid middle position
+    this.insertAtPosition(5, 2);
+    this.printAllNodes();
+
+    // Case 6: Insert at end using position (size+1)
+    this.insertAtPosition(15, this.size + 1);
+    this.printAllNodes();
+
+    // Case 7: Insert at invalid large position
+    this.insertAtPosition(50, 100);
+
+    // Case 8: Print in reverse order
+    this.printAllNodesReverseOrder();
+
+    // Case 9: Search for existing element
+    this.search(10);
+
+    // Case 10: Search for non-existing element
+    this.search(99);
+
+    // ==== DELETE TEST CASES ====
+    System.out.println("\n=== Testing Deletion Operations ===");
+
+    // Case 11: Delete at front
+    System.out.println("Deleting at front...");
+    this.deleteAtFront();
+    this.printAllNodes();
+
+    // Case 12: Delete at end
+    System.out.println("Deleting at end...");
+    this.deleteAtEnd();
+    this.printAllNodes();
+
+    // Case 13: Delete at valid middle position
+    System.out.println("Deleting at position 2...");
+    this.deleteAtPosition(2);
+    this.printAllNodes();
+
+    // Case 14: Delete at invalid position
+    System.out.println("Deleting at invalid position...");
+    this.deleteAtPosition(100);
+
+    // Case 15: Delete until list becomes empty
+    System.out.println("Deleting all elements one by one...");
+    while (this.size > 0) {
+        this.deleteAtFront();
         this.printAllNodes();
-    
-        // Case 4: Insert at end
-        this.InsertAtEnd(10);
-        this.printAllNodes();
-    
-        // Case 5: Insert at valid middle position
-        this.insertAtPosition(5, 2);
-        this.printAllNodes();
-    
-        // Case 6: Insert at end using position (size+1)
-        this.insertAtPosition(15, this.size + 1);
-        this.printAllNodes();
-    
-        // Case 7: Insert at invalid large position
-        this.insertAtPosition(50, 100);
-    
-        // Case 8: Print in reverse order
-        this.printAllNodesReverseOrder();
-    
-        // Case 9: Search for existing element
-        this.search(10);
-    
-        // Case 10: Search for non-existing element
-        this.search(99);
-    
-        System.out.println("=== End of Testing DoublyLinkedList ===");
     }
+
+    // Case 16: Try deleting from empty list
+    System.out.println("Deleting from empty list...");
+    this.deleteAtFront();
+    this.deleteAtEnd();
+    this.deleteAtPosition(1);
+
+    System.out.println("=== End of Testing DoublyLinkedList ===");
+}
 
 }
