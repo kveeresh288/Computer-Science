@@ -3,9 +3,13 @@ package DSA.LinkedList;
 public class DSA_Application {
     public static void main(String[] args) {
        
-        SinglyLinkedList sll = new SinglyLinkedList();
-        DoublyLinkedList dll = new DoublyLinkedList();
-        dll.testAllOperations();
+       // SinglyLinkedList sll = new SinglyLinkedList();
+        //DoublyLinkedList dll = new DoublyLinkedList();
+        CircularSinglyList dsll = new CircularSinglyList();
+
+        dsll.testAllOperations();
+        
+        //dll.testAllOperations();
 
 
         // sll.testAllOperations();
