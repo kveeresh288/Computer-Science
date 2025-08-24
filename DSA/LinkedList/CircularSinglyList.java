@@ -100,8 +100,6 @@ public class CircularSinglyList {
             return;
         }
 
-
-
         System.out.print("Head --> ");
         Node cur = this.Head;
 
@@ -116,6 +114,111 @@ public class CircularSinglyList {
         return;
 
     }
+
+
+    public boolean Search(int key){
+
+        System.out.println();
+
+        if (this.Head == null) {
+            System.out.println("The SingleCircularListIsEmpty: Key Not Found");
+            return false;
+        }
+
+        Node cur = this.Head;
+
+       do{
+            if( cur.data == key){
+                System.out.println(key +" Key Found");
+                return true;
+
+            }
+            cur = cur.next;
+           
+
+        }while (cur != Head);
+
+       
+        System.out.println(key +" Key Not Found ");
+        return false;
+
+    }
+
+
+    public void deleteAtBeginnig(){
+
+        if( this.Head == null ){
+            System.out.println("Circular Singly Linked List Is Empty: ");
+            return;
+        }
+
+        if (this.Head == this.Tail) {
+            this.Head = this.Tail = null;
+            this.size--;
+            return;
+        }
+
+        this.Head = this.Head.next;
+        this.Tail.next = Head;
+        this.size--; 
+        
+    }
+
+    public void deleteAtEnd(){
+
+        if( this.Head == null ){
+            System.out.println("Circular Singly Linked List Is Empty: ");
+            return;
+        }
+
+        if (this.Head == this.Tail) {
+            this.Head = this.Tail = null;
+            this.size--;
+            return;
+        }
+
+        Node cur  = this.Head;
+
+        while(cur.next != this.Tail){
+            cur = cur.next;
+        }
+
+        cur.next = this.Head;
+        this.Tail = cur; 
+        this.size--;
+
+    }
+
+    public void deleteAtPositon(int delPosition){
+
+        if(delPosition <= 0 || delPosition > this.size){
+            System.out.println("Invalid Delete Position ");
+            return;
+        }
+
+        if(delPosition == 1){
+            this.deleteAtBeginnig();
+            return;
+        }
+
+        if(delPosition == this.size){
+            this.deleteAtEnd();
+            return;
+        }
+
+        Node cur = Head;
+        int pos = 1 ;
+
+        while(pos < delPosition - 1){
+            cur = cur.next;
+            pos++;
+        }
+
+        cur.next=cur.next.next;
+        this.size--;
+
+    }
+
 
     public void testAllOperations(){
 
@@ -146,7 +249,35 @@ public class CircularSinglyList {
 
         insertAtPosition(size+2, 99);
 
+
+        System.out.println("\n Testing Search:");
+        this.Search(3);  
+        this.Search(99); 
+        this.Search(6);  
+        this.Search(100);
+
+        System.out.println("\n Testing Deletions:");
+
+        this.deleteAtBeginnig();
+        this.printList();
+
+        this.deleteAtEnd();
+        this.printList();
+
+        this.deleteAtPositon(3);
+        this.printList();
+
+        this.deleteAtPositon(2);
+        this.printList();
+
+        this.deleteAtPositon(size); 
+        this.printList();
+
+        this.deleteAtPositon(-1); 
+        this.deleteAtPositon(size+1); 
+
+
+        System.out.println("\n All Operations Tested!");
+
     }
-
-
 }
