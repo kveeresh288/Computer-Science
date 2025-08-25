@@ -3,17 +3,18 @@ package DSA.LinkedList;
 public class DSA_Application {
     public static void main(String[] args) {
        
-       // SinglyLinkedList sll = new SinglyLinkedList();
-        //DoublyLinkedList dll = new DoublyLinkedList();
-        CircularSinglyList dsll = new CircularSinglyList();
+    // SinglyLinkedList sll = new SinglyLinkedList();
+    //DoublyLinkedList dll = new DoublyLinkedList();
+    //dll.testAllOperations()
 
-        dsll.testAllOperations();
+    // sll.testAllOperations();
+    // dll.printAllNodes();
+    // dll.testDeleteOperations();
+    // CircularSinglyList csll = new CircularSinglyList();
+    // csll.testAllOperations();
+
+    CircularDoublyList cdll = new CircularDoublyList();
+    cdll.testAllOperations();
         
-        //dll.testAllOperations();
-
-
-        // sll.testAllOperations();
-        // dll.printAllNodes();
-       // dll.testDeleteOperations();
-    }
+    }  
 }
