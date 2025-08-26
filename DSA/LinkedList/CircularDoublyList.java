@@ -109,6 +109,9 @@ public class CircularDoublyList {
 
 
     public void print(){
+
+        System.out.println();
+
         if(this.head == null ){
             System.out.println("List is Empty ");
             return;
@@ -124,6 +127,8 @@ public class CircularDoublyList {
         } while (cur!=this.head);
 
         System.out.println(" <--> Head ");
+
+        System.out.println();
     }
     
 
@@ -150,6 +155,96 @@ public class CircularDoublyList {
         System.out.println("Key( "+key +" ) " +"is Not Found ");
     }
 
+
+    public void deleteAtFront(){
+
+        if(this.head == null ){
+            System.out.println("list is empty Can't Delete ");
+            return;
+        }
+
+        if(this.head == this.tail){
+
+            System.out.println("Deleted At Head : "+this.head.data);
+            this.head = this.tail = null;
+            this.size--; 
+            return;
+        }
+
+
+
+        System.out.println("Deleted At Head : "+this.head.data);
+
+        this.head = this.head.next;
+        this.head.prev = this.tail;
+        this.tail.next = this.head;
+
+        this.size--;
+    }
+
+    public void deleteAtEnd(){
+
+        if(this.head == null ){
+            System.out.println("list is empty Can't Delete ");
+            return;
+        }
+
+        if(this.head == this.tail){
+
+            System.out.println("Deleted At Tail : "+this.tail.data);
+            this.head = this.tail = null;
+            this.size--; 
+            return;
+        }
+
+
+
+        System.out.println("Deleted At Tail : "+this.tail.data);
+
+        this.tail.prev.next = this.head;
+        this.tail = this.tail.prev;
+        this.head.prev = this.tail;
+
+
+        this.size--;
+    }
+
+
+    public void deleteAtPosition( int delPos ){
+
+        if(delPos <=0 || delPos > this.size ){
+            System.out.println("Invalid Delete Position ");
+            return;
+        }
+
+        if(delPos == 1){
+            this.deleteAtFront();
+            return;
+        }
+
+        if(delPos == this.size){
+            this.deleteAtEnd();
+            return;
+        }
+
+        Dnode cur = this.head;
+
+        int pos = 1 ;
+
+        while (pos < delPos-1) { 
+
+            cur = cur.next;
+            pos++;
+      }
+
+      System.out.println("Deleted at Position "+delPos+" ("+cur.next.data+") ");
+
+      cur.next = cur.next.next;
+      cur.next.prev = cur;
+
+      this.size--;
+
+    }
 
     public void testAllOperations() {
         System.out.println("\n--- Testing Circular Doubly Linked List Operations ---");
@@ -188,6 +283,47 @@ public class CircularDoublyList {
         // Search Keys
         this.Search(15);   // present
         this.Search(100);  // not present
-    }
+    
+        System.out.println();
+        System.out.println("--- Testing Delete Operations ---");
 
+        // Delete at Front
+        this.deleteAtFront();
+        this.print();
+    
+        // Delete at End
+        this.deleteAtEnd();
+        this.print();
+    
+        // Delete at Position (middle)
+        if (this.size >= 3) {
+            this.deleteAtPosition(3);
+            this.print();
+        }
+    
+        // Delete at Position (first)
+        this.deleteAtPosition(1);
+        this.print();
+    
+        // Delete at Position (last)
+        this.deleteAtPosition(this.size);
+        this.print();
+    
+        // Invalid delete positions
+        this.deleteAtPosition(-1);
+        this.deleteAtPosition(this.size + 5);
+    
+        // Delete remaining nodes
+        while (this.size > 0) {
+            this.deleteAtFront();
+            this.print();
+        }
+    
+        // Try delete on empty list
+        this.deleteAtFront();
+        this.deleteAtEnd();
+        this.deleteAtPosition(1);
+    
+        System.out.println("\n--- All operations tested successfully ---");
+    }
 }
