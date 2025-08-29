@@ -13,8 +13,12 @@ public class DSA_Application {
     // CircularSinglyList csll = new CircularSinglyList();
     // csll.testAllOperations();
 
-    CircularDoublyList cdll = new CircularDoublyList();
-    cdll.testAllOperations();
-        
+    //CircularDoublyList cdll = new CircularDoublyList();
+    //cdll.testAllOperations();
+
+    StackLL stack = new StackLL(3);
+ 
+    stack.testStackOperations();
+
     }  
 }
