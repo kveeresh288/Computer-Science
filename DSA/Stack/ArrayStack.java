@@ -20,7 +20,6 @@ public class ArrayStack {
         }
 
         stack [ ++this.top ] = value;
-        return;
     }
 
     public int pop(){
@@ -53,5 +52,4 @@ public class ArrayStack {
 
     }
     
-
 }

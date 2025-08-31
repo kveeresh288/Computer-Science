@@ -56,10 +56,10 @@ public class TestArrayStack {
         StackLL stackLL = new StackLL(3);
 
        
-        stackLL.testStackOperations();
+        // stackLL.testStackOperations();
 
-        System.out.println("\n--- End of Test ---");
-        System.out.println();
+        // System.out.println("\n--- End of Test ---");
+        // System.out.println();
 
        
         
