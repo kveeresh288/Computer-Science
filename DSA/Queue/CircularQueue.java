@@ -16,7 +16,7 @@ public class CircularQueue {
 
     public void enqueue(int val){
 
-        if(rear == -1 ){
+        if( rear == -1 ){
 
             this.front = this.rear = 0;
             this.queue[this.front] = val;
