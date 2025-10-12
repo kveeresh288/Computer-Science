@@ -1,0 +1,12 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Run MotivationalAiAgent App",
+            "request": "launch",
+            "mainClass": "Projects.ai-qoute-agent.app.src.main.java.org.example.App",
+            "projectName": "Computer-Science" 
+        }
+    ]
+}
