@@ -4,12 +4,16 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 public class AppTest {
-//AIzaSyDJC40UGAaO4wP0Pe6lJLM83xw4N7S_UU8
+
     @Test
     void testAdviceGeneration() {
         GoogleStudioAIClient client = new GoogleStudioAIClient();
         AIMotivationalQuoteAgent agent = new AIMotivationalQuoteAgent(client);
-        String advice = agent.generateAdvice("K Veeresh", "DSA");
+        String advice = agent.generateAdvice("Veeresh", "MERN");
         assertNotNull(advice, "Advice should not be null");
+    }
+
+    private void assertNotNull(String advice, String advice_should_not_be_null) {
+        throw new UnsupportedOperationException("Not supported yet.");
     }
 }

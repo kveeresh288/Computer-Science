@@ -33,6 +33,7 @@ public class AIMotivationalQuoteAgent {
 
             Output format:
             Motivation:
+            Address the student by name ("%s") naturally in the first line.
             • <short sentence>
             • <short sentence>
 
@@ -41,7 +42,7 @@ public class AIMotivationalQuoteAgent {
             • <bullet 2>
             • <bullet 3>
             • <optional bullet 4-5>
-            """.formatted(name, area);
+            """.formatted(name, area, name);
 
         return chatClient.complete(prompt, 180L);
     }

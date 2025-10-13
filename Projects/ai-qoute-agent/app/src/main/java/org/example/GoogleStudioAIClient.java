@@ -31,34 +31,46 @@ public class GoogleStudioAIClient {
 
     public String complete(String prompt, Long maxTokens) {
         try {
+           
             JSONObject requestJson = new JSONObject()
-                    .put("input", new JSONObject()
-                            .put("text", prompt)
-                            .put("maxOutputTokens", maxTokens != null ? maxTokens : 200));
-
+                    .put("contents", new org.json.JSONArray()
+                            .put(new JSONObject()
+                                    .put("parts", new org.json.JSONArray()
+                                            .put(new JSONObject().put("text", prompt))
+                                    )
+                            )
+                    );
+    
             RequestBody body = RequestBody.create(
                     requestJson.toString(),
                     MediaType.get("application/json; charset=utf-8")
             );
-
+    
             Request request = new Request.Builder()
                     .url(API_URL)
                     .post(body)
                     .build();
-
+    
             try (Response response = client.newCall(request).execute()) {
                 if (!response.isSuccessful()) {
                     throw new RuntimeException("Google Studio API request failed: " +
                             response.code() + " " + response.message());
                 }
-
+    
                 String responseBody = response.body().string();
                 JSONObject json = new JSONObject(responseBody);
-
-                // Extract generated text (adjust if actual API differs)
-                return json.optString("output_text", "No response from Google Studio AI").trim();
+    
+                //  Extract generated text properly
+                return json
+                        .getJSONArray("candidates")
+                        .getJSONObject(0)
+                        .getJSONObject("content")
+                        .getJSONArray("parts")
+                        .getJSONObject(0)
+                        .getString("text")
+                        .trim();
             }
-
+    
         } catch (IOException ex) {
             LOG.log(Level.SEVERE, "Google Studio AI request failed: " + ex.getMessage(), ex);
             throw new RuntimeException(
