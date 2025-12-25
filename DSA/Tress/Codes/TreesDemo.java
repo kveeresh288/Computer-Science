@@ -34,7 +34,34 @@ public class TreesDemo {
             System.out.print( "->" + root.data );
     }
 
-   
+    public static void levelOrder(TreeNode root){
+
+        Queue<TreeNode> q = new LinkedList<>();
+    
+        q.add(root);
+
+        int c =0;
+    
+        while(!q.isEmpty()){
+    
+            int levelSize = q.size();
+    
+            System.out.print( "Level "+ ++c +" ");
+
+            for(int i = 0 ; i< levelSize; i++){
+                
+                TreeNode cur  = q.poll();
+                System.out.print("->" + cur.data);
+    
+                if(cur.left != null) q.add(cur.left);
+                if(cur.right != null) q.add(cur.right);
+    
+            }
+            System.out.println();
+        }
+    
+    }
+    
 
     public static void main(String[] args) {
         
