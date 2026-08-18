@@ -36,7 +36,7 @@ Below is a day-by-day index of all the notes and files committed.
 - [bitwiseoperators.pdf](./CS-Fundamentals/bitwiseoperators.pdf)
 
 ## Day 11
-- [Var\304\261ables and DataTypes.pdf"](./"CS-Fundamentals/Var\304\261ables%20and%20DataTypes.pdf")
+- [Varıables and DataTypes.pdf](./CS-Fundamentals/Var%C4%B1ables%20and%20DataTypes.pdf)
 
 ## Day 12
 - [FunctionsPart1.pdf](./CS-Fundamentals/FunctionsPart1.pdf)
@@ -104,6 +104,7 @@ Below is a day-by-day index of all the notes and files committed.
 - [FunctionCall.java](./Coding/FunctionCall.java)
 - [.DS_Store](./Coding/Java/.DS_Store)
 - [.DS_Store](./Coding/Java/Functions/.DS_Store)
+- [FunctionCall.java](./Coding/Java/Functions/Basics/FunctionCall.java)
 - [FunctionsDemo.class](./Coding/Java/Functions/Basics/FunctionsDemo.class)
 - [FunctionsDemo.java](./Coding/Java/Functions/Basics/FunctionsDemo.java)
 - [ReturnTypeDemo.class](./Coding/Java/Functions/Basics/ReturnTypeDemo.class)
@@ -119,9 +120,9 @@ Below is a day-by-day index of all the notes and files committed.
 - [Operatorsdemo.java](./Coding/Java/Operators/Operatorsdemo.java)
 
 ## Day 16
-- [Screenshot 2025-07-26 at 12.16.24\342\200\257AM.pdf"](./"Coding/Java/ConditionalStatements/Screenshot%202025-07-26%20at%2012.16.24\342\200\257AM.pdf")
 - [conditional statements 2.pdf](./CS-Fundamentals/conditional%20statements%202.pdf)
 - [ConditiobnalStatementsExample.java](./Coding/Java/ConditionalStatements/ConditiobnalStatementsExample.java)
+- [Screenshot 2025-07-26 at 12.16.24 AM.pdf](./Coding/Java/ConditionalStatements/Screenshot%202025-07-26%20at%2012.16.24%E2%80%AFAM.pdf)
 - [OperatorsAssignment.pdf](./Coding/Java/Operators/OperatorsAssignment.pdf)
 
 ## Day 17
@@ -146,6 +147,7 @@ Below is a day-by-day index of all the notes and files committed.
 - [Recursionl Tracing part II.pdf](./CS-Fundamentals/Recursionl%20Tracing%20part%20II.pdf)
 
 ## Day 23
+- [ArraysProblems.pdf](./CS-Fundamentals/ArraysProblems.pdf)
 - [Recursionl Tracing part II.pdf](./CS-Fundamentals/Recursionl%20Tracing%20part%20II.pdf)
 - [ilovepdf_merged-7.pdf](./CS-Fundamentals/ilovepdf_merged-7.pdf)
 - [Practice.java](./Coding/Java/Functions/Practice.java)
@@ -172,7 +174,7 @@ Below is a day-by-day index of all the notes and files committed.
 ## Day 28
 - [OOPS_Advanced_lyst1730170872945.pdf](./CS-Fundamentals/OOPS_Advanced_lyst1730170872945.pdf)
 - [OOPs_Advanced_Concepts_Comparison_lyst1730170872945.pdf](./CS-Fundamentals/OOPs_Advanced_Concepts_Comparison_lyst1730170872945.pdf)
-- [Object-Oriented Design Mapping User Actions to Classes (Lesson Notes).pdf](./CS-Fundamentals/Object-Oriented%20Design%20Mapping%20User%20Actions%20to%20Classes%20(Lesson%20Notes).pdf)
+- [Object-Oriented Design Mapping User Actions to Classes (Lesson Notes).pdf](./CS-Fundamentals/Object-Oriented%20Design%20Mapping%20User%20Actions%20to%20Classes%20%28Lesson%20Notes%29.pdf)
 - [Oops Advanced concepts.pdf](./CS-Fundamentals/Oops%20Advanced%20concepts.pdf)
 
 ## Day 30
@@ -191,7 +193,7 @@ Below is a day-by-day index of all the notes and files committed.
 - [BEHIND THE SCENES Of LINEAR.pdf](./CS-Fundamentals/BEHIND%20THE%20SCENES%20Of%20LINEAR.pdf)
 
 ## Day 34
-- [Arrays, Array list & Vectors.pdf](./CS-Fundamentals/Arrays,%20Array%20list%20&%20Vectors.pdf)
+- [Arrays, Array list & Vectors.pdf](./CS-Fundamentals/Arrays%2C%20Array%20list%20%26%20Vectors.pdf)
 - [ArrayDemo.java](./Coding/Java/Arrays/ArrayDemo.java)
 
 ## Day 35
@@ -203,7 +205,7 @@ Below is a day-by-day index of all the notes and files committed.
 - [SinglyLinkedList.java](./DSA/LinkedList/SinglyLinkedList.java)
 
 ## Day 38
-- [Delete & Search In Singly Linked List.pdf](./CS-Fundamentals/Delete%20&%20Search%20In%20Singly%20Linked%20List.pdf)
+- [Delete & Search In Singly Linked List.pdf](./CS-Fundamentals/Delete%20%26%20Search%20In%20Singly%20Linked%20List.pdf)
 - [SinglyLinkedList.java](./DSA/LinkedList/SinglyLinkedList.java)
 
 ## Day 39
@@ -327,6 +329,7 @@ Below is a day-by-day index of all the notes and files committed.
 - [HashmapDemo.java](./DSA/HashMap/HashmapDemo.java)
 
 ## Day 71
+- [HASH SET IN JAVA.pdf](./CS-Fundamentals/HASH%20SET%20IN%20JAVA.pdf)
 - [HASH SET IN JAVApdf.pdf](./CS-Fundamentals/HASH%20SET%20IN%20JAVApdf.pdf)
 
 ## Day 72
@@ -362,6 +365,7 @@ Below is a day-by-day index of all the notes and files committed.
 - [Mathematical Algorithms part- 2.pdf](./MathsAlgorithm/Mathematical%20Algorithms%20part-%202.pdf)
 
 ## Day 82
+- [Maths Algorithms Part 3.pdf](./MathsAlgorithm/Maths%20Algorithms%20Part%203.pdf)
 - [Maths Algorithms Part 4.pdf](./MathsAlgorithm/Maths%20Algorithms%20Part%204.pdf)
 
 ## Day 83
@@ -374,7 +378,7 @@ Below is a day-by-day index of all the notes and files committed.
 - [DivisibilityDemo.java](./MathsAlgorithm/DivisibilityDemo.java)
 
 ## Day 86
-- [NETWORKING BASICS & HISTORY.pdf](./CS-Fundamentals/NETWORKING%20BASICS%20&%20HISTORY.pdf)
+- [NETWORKING BASICS & HISTORY.pdf](./CS-Fundamentals/NETWORKING%20BASICS%20%26%20HISTORY.pdf)
 
 ## Day 87
 - [Computer Networks Proxy FireWall.pdf](./CS-Fundamentals/Computer%20Networks%20Proxy%20FireWall.pdf)
@@ -408,7 +412,8 @@ Below is a day-by-day index of all the notes and files committed.
 - [SDLC.pdf](./Projects/TheoryNotes/SDLC.pdf)
 
 ## Day 103
-- [Screenshot 2025-10-21 at 9.17.39\342\200\257PM.pdf"](./"Communication/Screenshot%202025-10-21%20at%209.17.39\342\200\257PM.pdf")
+- [Screenshot 2025-10-21 at 9.17.39 PM.pdf](./Communication/Screenshot%202025-10-21%20at%209.17.39%E2%80%AFPM.pdf)
+- [performancewithpurpose.pdf](./Communication/performancewithpurpose.pdf)
 
 ## Day 104
 - [teamworkandCollaboration.pdf](./Communication/teamworkandCollaboration.pdf)
@@ -453,20 +458,20 @@ Below is a day-by-day index of all the notes and files committed.
 - [Scalability.pdf](./SDLC/SytemDesignsExample/Scalability.pdf)
 
 ## Day 118
-- [Exploring System Design of \"Book My Show\".pdf"](./"SDLC/SytemDesignsExample/Exploring%20System%20Design%20of%20\"Book%20My%20Show\".pdf")
+- [Exploring System Design of \"Book My Show\".pdf](./SDLC/SytemDesignsExample/Exploring%20System%20Design%20of%20%5C%22Book%20My%20Show%5C%22.pdf)
 
 ## Day 119
-- [Howl Disney Hotstar Managed (5r) Live.pdf](./SDLC/SytemDesignsExample/Howl%20Disney%20Hotstar%20Managed%20(5r)%20Live.pdf)
+- [Howl Disney Hotstar Managed (5r) Live.pdf](./SDLC/SytemDesignsExample/Howl%20Disney%20Hotstar%20Managed%20%285r%29%20Live.pdf)
 
 ## Day 120
 - [Exploring System Design of Dropbore part 1.pdf](./SDLC/SytemDesignsExample/Exploring%20System%20Design%20of%20Dropbore%20part%201.pdf)
 
 ## Day 121
-- [Exploring System Design of \"Drop Box\" part-2.pdf"](./"SDLC/SytemDesignsExample/Exploring%20System%20Design%20of%20\"Drop%20Box\"%20part-2.pdf")
+- [Exploring System Design of \"Drop Box\" part-2.pdf](./SDLC/SytemDesignsExample/Exploring%20System%20Design%20of%20%5C%22Drop%20Box%5C%22%20part-2.pdf)
 
 ## Day 122
-- [Exploring System Design of \"Drop Box\" part-2.pdf"](./"SDLC/SytemDesignsExample/Exploring%20System%20Design%20of%20\"Drop%20Box\"%20part-2.pdf")
 - [Exploring System Design of Netflix.pdf](./SDLC/SytemDesignsExample/Exploring%20System%20Design%20of%20Netflix.pdf)
+- [Exploring System Design of \"Drop Box\" part-2.pdf](./SDLC/SytemDesignsExample/Exploring%20System%20Design%20of%20%5C%22Drop%20Box%5C%22%20part-2.pdf)
 
 ## Day 123
 - [Exploring System Design of Netflise part-2.pdf](./SDLC/SytemDesignsExample/Exploring%20System%20Design%20of%20Netflise%20part-2.pdf)
@@ -496,7 +501,7 @@ Below is a day-by-day index of all the notes and files committed.
 - [File and database Storage System.pdf](./Database/File%20and%20database%20Storage%20System.pdf)
 
 ## Day 132
-- [Block, object, and file storage in System.pdf](./Database/Block,%20object,%20and%20file%20storage%20in%20System.pdf)
+- [Block, object, and file storage in System.pdf](./Database/Block%2C%20object%2C%20and%20file%20storage%20in%20System.pdf)
 
 ## Day 133
 - [Database Sharing System Design.pdf](./Database/Database%20Sharing%20System%20Design.pdf)
@@ -517,10 +522,10 @@ Below is a day-by-day index of all the notes and files committed.
 - [Capacity Estimation In System Design.pdf](./Database/Capacity%20Estimation%20In%20System%20Design.pdf)
 
 ## Day 139
-- [Capacity Estimation Care study & Examples.pdf](./Database/Capacity%20Estimation%20Care%20study%20&%20Examples.pdf)
+- [Capacity Estimation Care study & Examples.pdf](./Database/Capacity%20Estimation%20Care%20study%20%26%20Examples.pdf)
 
 ## Day 141
-- [Functional & Non Functional Requirements.pdf](./SDLC/SytemDesignsExample/Functional%20&%20Non%20Functional%20Requirements.pdf)
+- [Functional & Non Functional Requirements.pdf](./SDLC/SytemDesignsExample/Functional%20%26%20Non%20Functional%20Requirements.pdf)
 
 ## Day 142
 - [Web Servers proxies and their rule in designing systems.pdf](./SDLC/SytemDesignsExample/Web%20Servers%20proxies%20and%20their%20rule%20in%20designing%20systems.pdf)
@@ -631,16 +636,16 @@ Below is a day-by-day index of all the notes and files committed.
 - [Trees HandWritten Nodes Part-11.pdf](./DSA/Tress/Trees%20HandWritten%20Nodes%20Part-11.pdf)
 
 ## Day 174
-- [Trees HandWritten Nodes Part-11.pdf](./DSA/Tress/Trees%20HandWritten%20Nodes%20Part-11.pdf)
 - [Trees HandWritten Notes Part - 1212.pdf](./DSA/Tress/Trees%20HandWritten%20Notes%20Part%20-%201212.pdf)
+- [Trees HandWritten Notes Part-11.pdf](./DSA/Tress/Trees%20HandWritten%20Notes%20Part-11.pdf)
 
 ## Day 175
 - [Trees HandErittenNotes Part-13.pdf](./DSA/Tress/Trees%20HandErittenNotes%20Part-13.pdf)
 
 ## Day 176
-- [Trees HandErittenNotes Part-13.pdf](./DSA/Tress/Trees%20HandErittenNotes%20Part-13.pdf)
-- [Trees HandWritten Notes Part - 1212.pdf](./DSA/Tress/Trees%20HandWritten%20Notes%20Part%20-%201212.pdf)
-- [Trees HandWrittenNotes Part 22.pdf](./DSA/Tress/Trees%20HandWrittenNotes%20Part%2022.pdf)
+- [Trees HandWritten Notes Part - 12.pdf](./DSA/Tress/Trees%20HandWritten%20Notes%20Part%20-%2012.pdf)
+- [Trees HandWrittenNotes Part 2.pdf](./DSA/Tress/Trees%20HandWrittenNotes%20Part%202.pdf)
+- [Trees HandWrittenNotes Part-13.pdf](./DSA/Tress/Trees%20HandWrittenNotes%20Part-13.pdf)
 - [Trees HandWrittenNotes Part-14.pdf](./DSA/Tress/Trees%20HandWrittenNotes%20Part-14.pdf)
 
 ## Day 177
@@ -650,9 +655,9 @@ Below is a day-by-day index of all the notes and files committed.
 - [Trees HandWriteen Notes Part-16.pdf](./DSA/Tress/Trees%20HandWriteen%20Notes%20Part-16.pdf)
 
 ## Day 179
-- [Trees HandWriteen Notes Part-16.pdf](./DSA/Tress/Trees%20HandWriteen%20Notes%20Part-16.pdf)
+- [Trees HandWriteen Notes Part - 16.pdf](./DSA/Tress/Trees%20HandWriteen%20Notes%20Part%20-%2016.pdf)
 - [Trees HansWritten Notes Part - 17.pdf](./DSA/Tress/Trees%20HansWritten%20Notes%20Part%20-%2017.pdf)
 
 ## Day 180
-- [Trees HandWriteen Notes Part - 16.pdf](./DSA/Tress/Trees%20HandWriteen%20Notes%20Part%20-%2016.pdf)
+- [Trees HandWritten Notes Part - 16.pdf](./DSA/Tress/Trees%20HandWritten%20Notes%20Part%20-%2016.pdf)
 - [Trees HandWritten Notes Part - 18.pdf](./DSA/Tress/Trees%20HandWritten%20Notes%20Part%20-%2018.pdf)
